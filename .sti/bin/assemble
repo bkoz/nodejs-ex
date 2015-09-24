@@ -28,8 +28,9 @@ cp -Rf /tmp/src/. ./
 chmod -R g+rw ./
 
 echo "---> Building your Node application from source"
-npm config set ${CUSTOM_PROXY_HOST}:${CUSTOM_PROXY_PORT}
-npm config set ${CUSTOM_PROXY_HOST}:${CUSTOM_PROXY_PORT}
+echo "setting npm proxy config to: " ${CUSTOM_PROXY_HOST}:${CUSTOM_PROXY_PORT}
+npm config set http http://${CUSTOM_PROXY_HOST}:${CUSTOM_PROXY_PORT}
+npm config set http-proxy http://${CUSTOM_PROXY_HOST}:${CUSTOM_PROXY_PORT}
 npm install -d
 
 
