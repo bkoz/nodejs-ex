@@ -22,7 +22,7 @@ fi
 # Link the modules
 #npm link $module_list
 
-echo "**** Running my assemble script ****"
+echo "**** Running my assemble script v1 ****"
 
 echo "---> Installing application source"
 cp -Rf /tmp/src/. ./
